@@ -114,7 +114,7 @@ ul {
     }
 
     #footer {
-        height: 450px !important;
+        height: 500px !important;
     }
 
     #joinus h1 {
@@ -191,4 +191,8 @@ ul {
     text-decoration: none;
     font-size: 45px;
     margin: 10px
+}
+
+#col2 div ul li a {
+    font-size: var(--small)
 }
