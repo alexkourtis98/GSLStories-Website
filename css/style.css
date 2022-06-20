@@ -196,3 +196,7 @@ ul {
 #col2 div ul li a {
     font-size: var(--small)
 }
+
+html, body{
+    scroll-behavior: smooth;
+}
