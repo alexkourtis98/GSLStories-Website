@@ -13,147 +13,308 @@
     <link href="./img/newlogo.png" rel="icon" type="image/x-icon">
 
     <style>
+        :root {
+            --blue: #065ED4;
+            --white: #ffffff;
+            --black: #231f20;
+            --gray: #999999;
+            --small: 20px;
+            --smallmid: 22px;
+            --verysmall: 14px;
+            --mid: 25px;
+            --big: 30px;
+        }
+
+        * {
+            color: var(--black);
+        }
+
         body, html {
             padding: 0;
             margin: 0;
+            overflow-x: hidden;
+            height: 100%;
         }
 
         #headerul li {
             margin: 12px;
+            font-size: var(--small);
         }
 
-        #logo {
-            margin: auto;
+        #headerul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #footer * {
+            color: white;
+        }
+
+        #footer ul li {
+            margin: 15px;
         }
 
         ul {
             list-style: none
         }
 
+        * {
+            font-family: "Trebuchet MS", serif;
+        }
+
+        .imgcontainer img {
+            border-radius: 5px;
+        }
+
+        #joinus * {
+            color: white;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .imgcontainer {
+                display: block !important;
+            }
+
+            #image1 {
+                margin: auto !important;
+            }
+
+            #image2 {
+                margin: auto !important;
+            }
+
+            #image3 {
+                margin: auto !important;
+            }
+
+            #image4 {
+                margin: auto !important;
+            }
+
+            #landing h1 {
+                font-size: var(--smallmid) !important;
+            }
+
+            #footer h1 {
+                font-size: var(--small) !important;
+            }
+
+            #footer h2 {
+                font-size: var(--small) !important;
+            }
+
+            #footer h3 {
+                font-size: var(--verysmall) !important;
+            }
+
+            #footer ul li {
+                margin: 15px 0 15px 0 !important;
+            }
+
+            #footer #col1, #footer #col2 {
+                margin: 7px !important;
+            }
+
+            #footer div {
+                margin: 0 !important;
+            }
+
+            #footer {
+                height: 350px !important;
+            }
+
+            #joinus h1 {
+                font-size: var(--mid) !important;
+            }
+
+            #joinus h2 {
+                margin: 15px;
+                font-size: var(--small)) !important;
+            }
+
+            #footer p {
+                font-size: var(--verysmall) !important;
+            }
+
+            #footer {
+                padding: 0 !important;
+            }
+
+            #landing h3 {
+                font-size: var(--verysmall) !important;
+            }
+
+            #headerulcontainer {
+                display: none !important;
+                /*font-size: var(--verysmall) !important;*/
+            }
+
+            #logo {
+                text-align: center !important;
+            }
+
+            #infodesc {
+                max-width: 300px !important;;
+            }
+
+        }
     </style>
 </head>
 
 <body>
 
-<div id="header" style="background-color: blue; height: 80px; width: 100%; position: sticky !important; top: 0">
-    <div style="background-color: red; width: 100px; height: 100%; float: left; display: flex">
-        <p id="logo">logo goes here</p>
-    </div>
-    <div style="background-color: purple; width: auto; height: 100%;  float: right">
-        <ul id="headerul" style="list-style-type: none;  justify-content: center; display: flex; align-items: center;">
-            <li>Home</li>
-            <li>What we do</li>
-            <li>Welcome Video</li>
-            <li>Team</li>
-            <li>Join us</li>
-            <li>Contact us</li>
-        </ul>
-    </div>
-</div>
-
-<div id="landing" style="background-color: brown; width: 100vw; height: 100vh;">
-
-</div>
-
-<div id="transition1">
-    <div style="text-align: center; max-width: 600px; margin: auto">
-        <h1>What is it</h1>
-        <h2>asdaasdasd</h2>
-        <h3>dsadadasdadsadadasdadsadadasdadsadadasdadsadadasda
-            dsadadasdadsadadasdadsadadasdadsadadasdadsadadasdadsadadasda</h3>
+<div id="header" style="background-color: var(--blue); position: sticky !important; top: 0">
+    <div style="justify-content: center; display: flex; align-items: center; height: 80px; width: 100%; ">
+        <div id="logo" style="max-width: 150px; height: 100%; float: left; overflow: hidden">
+            <a href="./index.html"><img alt="" src="./img/gslstories.png"
+                                        style="object-fit: contain; height: 100%; width: 100%"></a>
+        </div>
+        <div id="headerulcontainer" style="width: auto; height: 100%;  float: right">
+            <ul id="headerul"
+                style="list-style-type: none; justify-content: center; display: flex; align-items: center;">
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#transition1">What we do</a></li>
+                <li><a href="#welcome">Welcome Video</a></li>
+                <li><a href="#maincontributors">Team</a></li>
+                <li><a href="#joinus">Join us</a></li>
+                <li><a href="#footer">Contact us</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 
-<div id="welcome" style="background-color: green; width: 100vw; height: 100vh;">
-    adas
-</div>
-
-<div id="transition2">
-    <div style="text-align: center; max-width: 600px; margin: auto">
-        <h1>What is it</h1>
-        <h2>asdaasdasd</h2>
-        <h3>dsadadasdadsadadasdadsadadasdadsadadasdadsadadasda
-            dsadadasdadsadadasdadsadadasdadsadadasdadsadadasdadsadadasda</h3>
+<div id="landing"
+     style="width: 100vw; height: 100vh;
+     background: var(--blue);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+"
+>
+    <div style="text-align: center;">
+        <img alt="" src="./img/Screens.png" style="max-width: 500px; max-height: 500px; float: left;">
+        <h1 id="title" style="color: white;">Greek Sign Language Stories</h1>
+        <h3 id="infodesc" style="color: white; max-width: 400px; text-align: center; margin: auto">Download GSL Stories
+            and improve
+            your Sign
+            Language game</h3>
     </div>
 </div>
 
-<div id="maincontributors" style="background-color: red; width: 100vw; min-height: 50vh; ">
-    <div style="text-align: center; padding-top: 50px">
-        <h1>Main Contributors</h1>
+<div id="transition1" style="margin: 50px;">
+    <div style="text-align: center; max-width: 450px; margin: auto;">
+        <h1>What we do</h1>
+
+        <h3 style="color: var(--gray)">Greek Sign Language Stories aims to provide a study aid to people who want to
+            practice their Greek Sign
+            Language skills.</h3>
     </div>
-    <div style="display: flex;
+</div>
+
+<div id="welcome" style="padding: 0 50px 0 50px; max-width: 85vw; margin: auto; width:auto; height: 75vh;">
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen frameborder="0" height="315"
+            src="https://www.youtube.com/embed/IDkdq9yNDxw"
+            style="width: 100%; height: 100%"
+            title="YouTube video player"
+    ></iframe>
+</div>
+
+<div id="transition2" style="margin: 50px;">
+    <div style="text-align: center; max-width: 450px; margin: auto">
+        <h1>The Team</h1>
+        <h3 style="color: var(--gray)">This application would not have been possible without its amazing
+            contributors.</h3>
+    </div>
+</div>
+
+<div id="maincontributors" style="width: 100vw; min-height: 50vh; ">
+    <div style="text-align: center; ">
+        <h2>Main Contributors</h2>
+    </div>
+    <div class="imgcontainer" style="display: flex;
 justify-content: center; align-items: center">
         <div style="text-align: center; margin: 50px; ">
-            <div id="image1" style=" background-color: blue; width: 250px; height: 250px"></div>
-            <h3>sdads</h3>
+            <div id="image1" style="width: 250px; height: 250px">
+                <a href="https://www.instagram.com/kourtis.alexandros/" target="_blank">
+                    <img alt="" src="./img/alex.jpg" style="width: 100%; height: 100%; object-fit: contain">
+                </a>
+            </div>
+            <h3>Alexandros Kourtis</h3>
         </div>
 
         <div style="text-align: center; margin: 50px; ">
-            <div id="image2" style="background-color: blue; width: 250px; height: 250px"></div>
-            <h3>sdads</h3>
+            <div id="image2" style="width: 250px; height: 250px">
+                <a href="https://www.instagram.com/elias_bairamis/" target="_blank">
+                    <img alt="" src="./img/ilias2.jpg" style="width: 100%; height: 100%; object-fit: contain">
+                </a>
+            </div>
+            <h3>Ilias Bairamis</h3>
         </div>
     </div>
 </div>
 
-<div id="generalcontributors" style="background-color: red; width: 100vw; min-height: 50vh;">
-    <div style="text-align: center; padding-top: 50px">
-        <h1>General Contributors</h1>
+<div style="text-align: center;">
+    <h2>Other Contributors</h2>
+</div>
+
+<div class="imgcontainer" style="display: flex;
+justify-content: center; align-items: center;">
+    <div style="text-align: center; margin: 50px; ">
+        <div id="image3" style="width: 200px; height: 200px">
+            <a href="https://www.instagram.com/eliasemir.m/" target="_blank">
+                <img alt="" src="./img/elias.jpeg" style="width: 100%; height: 100%; object-fit: contain;">
+            </a>
+        </div>
+        <h3>Elias</h3>
     </div>
-    <div style="display: flex;
-justify-content: center; align-items: center; ">
-        <div style="text-align: center; margin: 50px; ">
-            <div id="image3" style=" background-color: blue; width: 250px; height: 250px"></div>
-            <h3>sdads</h3>
-        </div>
 
-        <div style="text-align: center; margin: 50px; ">
-            <div id="image4" style="background-color: blue; width: 250px; height: 250px"></div>
-            <h3>sdads</h3>
+    <div style="text-align: center; margin: 50px; ">
+        <div id="image4" style="width: 200px; height: 200px">
+            <a href="https://www.instagram.com/thepangratiproject/" target="_blank">
+                <img alt="" src="./img/project.jpg" style="width: 100%; height: 100%; object-fit: contain">
+            </a>
         </div>
-
-        <div style="text-align: center; margin: 50px; ">
-            <div id="image5" style=" background-color: blue; width: 250px; height: 250px"></div>
-            <h3>sdads</h3>
-        </div>
-
-        <div style="text-align: center; margin: 50px; ">
-            <div id="image6" style="background-color: blue; width: 250px; height: 250px"></div>
-            <h3>sdads</h3>
-        </div>
+        <h3>The Pangrati Project</h3>
     </div>
 </div>
 
-<div id="joinus" style="height: 100%; background-color: pink; width: 100%; display: flex;
-justify-content: center; align-items: center; border: 1px solid black;">
-    <div style="text-align: left; margin: 50px; width: 100%; ">
+<div id="joinus" style="height: 300px; width:100%; background: var(--blue);
+ display: flex;
+justify-content: center; align-items: center;">
+    <div style="text-align: center; max-width: 300px; margin: auto">
         <h1>Join Us!</h1>
-        <h2>adasddaasdasdasdasdasdadsadasddasdsadadasdsdadsad</h2>
-        <button>Button 1</button>
-        <button>Button 1</button>
+        <h2>Follow us on our social media to stay up to date with us : ) </h2>
+        <br>
+        <img alt="" src="./img/play.png">
     </div>
 </div>
 
-<div id="footer" style="background-color: green; bottom: 0; width: 100%; height: 300px;">
-    <div style="margin: 0 50px 0 50px">
-        <div id="col1" style="float:left; width: 49%">
-            <div style="text-align: left">
-                <h3>About this app</h3>
-                <p>Greek Sign Language Stories aims to provide a study aid to people who want to practice their Greek
+<div id="footer"
+     style="background-color: var(--blue); bottom: 0; width: 100%; min-height: 200px; padding: 50px">
+    <div style="margin: 0 50px 0 50px; width: 100%; height: 100%; ">
+        <div id="col1" style="float:left; height: 100%; width: 45%">
+            <div style="text-align: left;  height: 100%; ">
+                <h1>About this app</h1>
+                <p style="font-size: var(--small)">Greek Sign Language Stories aims to provide a study aid to people who
+                    want to
+                    practice their Greek
                     Sign Language skills. The developer of the app is <a
                             href="https://www.instagram.com/kourtis.alexandros/" target="_blank">Alexandros Kourtis</a>.
                     Please feel free to contact
-                    either the developer or at our official email <a href="asda">emailadsa</a> to express any comments,
+                    either the developer or at our official email <a href="mailto:gslstories@outlook.com">gslstories@outlook.com</a>
+                    to express any comments,
                     issues, ideas, or just say hi :)
             </div>
         </div>
-        <div id="col2" style="float:right; width: 49%">
+        <div id="col2" style="float:right; width: 45%">
             <div style="text-align: center">
-                <h3>Useful information</h3>
+                <h2>Useful information</h2>
                 <ul style="padding: 0; margin: 0">
-                    <li><p>Instagram</p></li>
-                    <li><p>Facebook</p></li>
-                    <li><p>Twitter</p></li>
-                    <li><p>Email</p></li>
+                    <li><a href="https://www.instagram.com/gslstories/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/GSLStories" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/GslStories" target="_blank">Twitter</a></li>
+                    <li><a href="mailto:gslstories@outlook.com">gslstories@outlook.com</a></li>
                 </ul>
             </div>
         </div>
