@@ -175,6 +175,11 @@ ul {
         height: 200px !important;
         display: block !important;
     }
+
+    #imgphone {
+        max-width: 350px !important;
+        max-height: 350px !important;
+    }
 }
 
 
