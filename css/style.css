@@ -180,6 +180,10 @@ ul {
         max-width: 370px !important;
         max-height: 370px !important;
     }
+
+    #col2 div {
+        text-align: center !important;
+    }
 }
 
 
