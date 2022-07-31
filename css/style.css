@@ -61,6 +61,11 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
+
+    #landing {
+        align-items: stretch !important;
+    }
+
     #welcome {
         max-width: 90vw !important;
     }
@@ -106,7 +111,7 @@ ul {
     }
 
     #footer #col1, #footer #col2 {
-        margin: 7px !important;
+        margin: auto !important;
     }
 
     #footer div {
@@ -114,7 +119,7 @@ ul {
     }
 
     #footer {
-        height: 500px !important;
+        height: 650px !important;
     }
 
     #joinus h1 {
@@ -129,6 +134,8 @@ ul {
     #footer p {
         font-size: var(--verysmall) !important;
     }
+
+
 
     #footer {
         padding: 0 !important;
@@ -154,7 +161,7 @@ ul {
         text-align: center !important;
         margin: auto !important;
         width: 100% !important;
-        height: 200px !important;
+        height: 300px !important;
         display: block !important;
     }
 
@@ -176,13 +183,16 @@ ul {
         display: block !important;
     }
 
-    #imgphone {
-        max-width: 370px !important;
-        max-height: 370px !important;
-    }
-
     #col2 div {
         text-align: center !important;
+    }
+
+    .imgcontainer div{
+        margin: auto !important;
+    }
+
+    .usefullinfo ul li a {
+        font-size: var(--verysmall) !important;
     }
 }
 
@@ -197,6 +207,23 @@ ul {
     font-size: var(--small)
 }
 
-html, body{
+html, body {
     scroll-behavior: smooth;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: auto;
+}
+
+.imagediv {
+    text-align: center !important;
+}
+
+.usefullinfo ul li a {
+    font-size: var(--small);
+}
+
+.usefullinfo {
+    height: auto;
 }
