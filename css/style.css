@@ -7,6 +7,8 @@
     /* colors ends */
 
     /* sizes starts */
+    --verytoosmall: 6px;
+    --toosmall: 10px;
     --verysmall: 14px;
     --small: 20px;
     --smallmid: 22px;
@@ -58,6 +60,49 @@ ul {
 
 #joinus * {
     color: white;
+}
+
+@media only screen and (max-width: 1600px) {
+
+    #footer {
+        height: 500px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #footer {
+        height: 750px !important;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    #footer {
+        height: 850px !important;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #imgphone {
+        max-height: 350px !important;
+        max-width: 350px !important;
+    }
+}
+
+@media only screen and (max-height: 1000px) {
+    #imgphone {
+        max-height: 450px !important;
+        max-width: 450px !important;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    #imgphone {
+        max-height: 400px !important;
+        max-width: 400px !important;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -225,4 +270,19 @@ html, body {
 
 .usefullinfo {
     height: auto;
+}
+
+@media only screen and (max-height: 550px) {
+    #imgphone {
+        max-height: 250px !important;
+        max-width: 250px !important;
+    }
+
+    #title {
+        font-size: var(--toosmall) !important;
+    }
+
+    #infodesc {
+        font-size: var(--toosmall) !important;
+    }
 }
