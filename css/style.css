@@ -286,3 +286,7 @@ html, body {
         font-size: var(--toosmall) !important;
     }
 }
+
+.imagediv a img {
+    border-radius: 50%
+}
