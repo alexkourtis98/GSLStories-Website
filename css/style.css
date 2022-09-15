@@ -105,7 +105,20 @@ ul {
     }
 }
 
+
+#burger {
+    display: none;
+}
+
+#brandlogo {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
+
+    #burger {
+        display: inline-block;
+    }
 
     #landing {
         align-items: stretch !important;
@@ -113,6 +126,10 @@ ul {
 
     #welcome {
         max-width: 90vw !important;
+    }
+
+    #brandlogo {
+        display: inline-block;
     }
 
     .imgcontainer {
@@ -148,7 +165,7 @@ ul {
     }
 
     #footer h3 {
-        font-size: var(--verysmall) !important;
+        font-size: var(--small) !important;
     }
 
     #footer ul li {
@@ -186,7 +203,7 @@ ul {
     }
 
     #landing h3 {
-        font-size: var(--verysmall) !important;
+        font-size: var(--small) !important;
     }
 
     #headerulcontainer {
@@ -289,4 +306,49 @@ html, body {
 
 .imagediv a img {
     border-radius: 50%
+}
+
+.mobile-container {
+    margin: auto;
+    background-color: #555;
+    height: 500px;
+    color: white;
+}
+
+.topnav {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+
+.topnav #myLinks {
+    display: none;
+}
+
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.topnav a:hover {
+    color: black;
+}
+
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+#myLinks li {
+    list-style-type: none !important;
 }
