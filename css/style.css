@@ -208,7 +208,6 @@ ul {
 
     #headerulcontainer {
         display: none !important;
-        background-color: var(--blue);
     }
 
     #logo {
@@ -352,4 +351,9 @@ html, body {
 
 #myLinks li {
     list-style-type: none !important;
+}
+
+
+#headerulcontainer {
+    background-color: var(--blue) !important;
 }
