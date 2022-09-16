@@ -71,6 +71,18 @@ ul {
 
 @media only screen and (max-width: 1000px) {
 
+    .downloads div {
+        display: block !important;;
+        margin: auto !important;
+    }
+
+    .downloads div img {
+        margin: auto !important;
+        float: none !important;
+        display: block !important;
+        padding: 1rem !important;
+    }
+
     #footer {
         height: 750px !important;
     }
@@ -353,7 +365,11 @@ html, body {
     list-style-type: none !important;
 }
 
-
 #headerulcontainer {
     background-color: var(--blue) !important;
+}
+
+.downloads img {
+    margin: 1rem;
+    cursor: pointer;
 }
