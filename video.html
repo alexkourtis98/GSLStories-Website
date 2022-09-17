@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="Alexandros Kourtis" name="author">
+
+    <title>GSL Stories</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+    <meta content="#0275d8" name="theme-color">
+
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-117Y4FD2GM');
+    </script>
+    <style>
+        video::-webkit-media-controls-panel {
+            background-image: linear-gradient(transparent, transparent) !important;
+        }
+
+        video::-webkit-media-controls-panel {
+            background-color: transparent !important;
+            box-shadow: none !important
+        }
+    </style>
+</head>
+
+<body style="overflow-x: hidden;">
+<div class="container-fluid" style="padding: 0 !important;">
+
+    <div id="header"
+         style="background-color: var(--blue); position: fixed !important; top: 0; width: 100%;">
+        <div class="topnav">
+            <a href="./index.html" style="padding: 0; margin: 0"><img alt="" id="brandlogo" src="./img/GSL%20Logo.png"
+                                                                      style="width: 50px; margin: auto;"></a>
+            <div id="myLinks">
+                <li><a href="./index.html">Αρχική</a></li>
+            </div>
+            <a class="icon" href="javascript:void(0);" id="burger" onclick="myFunction()">
+                <i class="fa fa-bars" style="color: white"></i>
+            </a>
+        </div>
+        <div id="headerulcontainer"
+             style="justify-content: center; display: flex; align-items: center; position: absolute; top: 0; width: 100%;  height: 60px;  ">
+            <div style="width: auto; height: 100%;  float: right">
+                <ul id="headerul"
+                    style="list-style-type: none; justify-content: center; display: flex; align-items: center;">
+                    <li><a href="./stories.html">Ιστορίες</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="landing"
+         style="width: 100vw; height: 200px;
+     background: var(--blue);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+"
+    >
+        <h2 id="titlehere"
+            style="color: white; font-weight: bold"></h2>
+    </div>
+    <div style="min-height: 100vh; width: 100vw; z-index: -1; padding: 0;">
+        <main>
+            <article class="blog-post">
+                <div>
+                    <div id="videohere" style="width: 100vw; height: 650px;">
+                    </div>
+                    <br>
+                    <div class="container">
+                        <h2 id="title"
+                            style="color: rgba(41, 41, 41, 1); font-weight: bold"></h2>
+
+                        <div id="contenthere">
+                        </div>
+
+                        <hr>
+                        <br>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <br>
+
+    </div>
+</div>
+<footer style="background: var(--blue); padding: 1rem">
+    <p style="color: white; text-align: center">Διεύθυνση: Δούριδος 2, Τηλέφωνο: <a href="tel:+306985633486"
+                                                                                    style="color: white;">+30 698
+        563
+        3486</a>, Email:
+        <a href="mailto:gslstories@outlook.com" style="color: white;">gslstories@outlook.com</a></p>
+</footer>
+
+</body>
+
+</html>
+<script crossorigin="anonymous"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"></script>
+<script>
+    async function getarticle() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const titleslug = urlParams.get('titleslug');
+        let params = "video/" + titleslug;
+        await getRequest(params);
+    }
+
+    async function getRequest(params) {
+        try {
+            const options = {
+                headers: {
+                    'xapikey': localStorage.getItem('secret')
+                }
+            }
+            const response = await fetch('https://gslapifastapi.herokuapp.com/' + params, options);
+            const data = await response.json();
+
+            document.title = data.title;
+
+            document.getElementById("contenthere").innerHTML += data.transcript;
+            document.getElementById("videohere").innerHTML = "     " +
+                "<iframe frameborder='0'  allow=\"fullscreen;\" allowfullscreen   allowfullscreen style='width: 100vw; height: 100%' src=" + data.url + ">" +
+                "</iframe>\n" + "</iframe>";
+            document.getElementById("titlehere").innerHTML += data.title;
+            document.getElementById("title").innerHTML += data.title;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async function init() {
+        await getarticle();
+    }
+
+    init();
+</script>

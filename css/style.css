@@ -373,3 +373,7 @@ html, body {
     margin: 1rem;
     cursor: pointer;
 }
+
+#title {
+    color: white;
+}
