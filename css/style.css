@@ -132,10 +132,6 @@ ul {
         display: inline-block;
     }
 
-    #landing {
-        align-items: stretch !important;
-    }
-
     #welcome {
         max-width: 90vw !important;
     }
