@@ -96,24 +96,10 @@ ul {
     }
 }
 
-@media only screen and (max-height: 700px) {
-    #imgphone {
-        max-height: 350px !important;
-        max-width: 350px !important;
-    }
-}
-
-@media only screen and (max-height: 1000px) {
-    #imgphone {
-        max-height: 450px !important;
-        max-width: 450px !important;
-    }
-}
-
 @media only screen and (max-height: 800px) {
     #imgphone {
-        max-height: 400px !important;
-        max-width: 400px !important;
+        width: 300px !important;
+        padding: 0 !important;
     }
 }
 
@@ -127,6 +113,11 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .downloads {
+        display: grid !important;
+        justify-content: center !important;
+    }
 
     #burger {
         display: inline-block;
@@ -298,11 +289,6 @@ html, body {
 }
 
 @media only screen and (max-height: 550px) {
-    #imgphone {
-        max-height: 250px !important;
-        max-width: 250px !important;
-    }
-
     #title {
         font-size: var(--toosmall) !important;
     }
