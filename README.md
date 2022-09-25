@@ -1,4 +1,4 @@
-![Screenshot](./img/gslstories.png)
+![Screenshot](./img/GSL%20Logo.png)
 
 ### Τι είναι το GSL Stories?
 
