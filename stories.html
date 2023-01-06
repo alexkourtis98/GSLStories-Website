@@ -57,14 +57,12 @@
         </div>
     </div>
 
-    <div id="landing"
-         style="width: 100vw; height: 300px;
+    <div id="landing" style="
+     width: 100vw; height: 300px;
      background: var(--blue);
      display: grid;
      justify-content: center;
-     align-items: center;
-"
-    ><h1 id="title">Δείτε τις Ιστορίες εδώ.</h1>
+     align-items: center;"><h1 id="title">Δείτε τις Ιστορίες εδώ.</h1>
     </div>
     <div style="min-height: 100vh; width: 100vw; z-index: -1; padding: 0;">
         <div class="container" style="z-index: 1; ">
@@ -76,21 +74,21 @@
             <main>
                 <br>
                 <br>
-                <ul id="writevideosHere" style="padding: 0; text-align: center;">
+                <ul id="writevideosHere" style="padding: 0; text-align: center; margin: auto; width: 1100px">
                 </ul>
             </main>
         </div>
         <br>
         <br>
     </div>
-    <footer style="background: var(--blue); padding: 1rem">
-        <p style="color: white; text-align: center">Διεύθυνση: Δούριδος 2, Τηλέφωνο: <a href="tel:+306985633486"
-                                                                                        style="color: white;">+30 698
-            563
-            3486</a>, Email:
-            <a href="mailto:gslstories@outlook.com" style="color: white;">gslstories@outlook.com</a></p>
+    <!--    <footer style="background: var(&#45;&#45;blue); padding: 1rem">-->
+    <!--        <p style="color: white; text-align: center">Διεύθυνση: Δούριδος 2, Τηλέφωνο: <a href="tel:+306985633486"-->
+    <!--                                                                                        style="color: white;">+30 698-->
+    <!--            563-->
+    <!--            3486</a>, Email:-->
+    <!--            <a href="mailto:gslstories@outlook.com" style="color: white;">gslstories@outlook.com</a></p>-->
 
-    </footer>
+    <!--    </footer>-->
 </div>
 
 </body>
@@ -143,15 +141,9 @@
     async function addtothml(payload) {
         await payload.forEach(video => {
             document.getElementById("writevideosHere").innerHTML += "<div>" +
-                "                <li class='mt-2'>\n" +
-                "                    <div>\n" +
-                "               <a style='color: initial' href='video.html?titleslug=" + video.id + "'>" +
-                "                        <h2 style='line-height: 40px; font-family: sohne, \"Helvetica Neue\", Helvetica, Arial, sans-serif; color: rgba(41, 41, 41, 1);'><b>" + video.title + "</b></h2>\n" +
-                "               </a>" +
-                "                        <div>\n" +
-                "                            <p>" + video.desc + "</p>\n" +
-                "                    </div></div>\n" +
-                "               </li><br>";
+                "                <li style='float: left; margin: 20px' class='mt-2'>\n" +
+                "              <iframe width='300' height='250' src=\"https://www.youtube.com/embed/jfKfPfyJRdk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>" +
+                "               </li>";
         })
     }
 

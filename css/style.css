@@ -288,6 +288,12 @@ html, body {
     height: auto;
 }
 
+.imagediv a img {
+    width: 300px !important;;
+    height: 300px !important;;
+    object-fit: cover;
+}
+
 @media only screen and (max-height: 550px) {
     #title {
         font-size: var(--toosmall) !important;
@@ -299,7 +305,7 @@ html, body {
 }
 
 .imagediv a img {
-    border-radius: 50%
+    border-radius: 20%;
 }
 
 .mobile-container {
