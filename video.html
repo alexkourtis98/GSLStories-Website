@@ -6,6 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="" name="description">
     <meta content="Alexandros Kourtis" name="author">
+    <link href="./img/gslstories.png" rel="icon" type="image/x-icon">
 
     <title>GSL Stories Video</title>
     <meta content="#0275d8" name="theme-color">
@@ -14,9 +15,28 @@
     <link href="./css/style.css" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
 
+    <style>
+        #headerulcontainer {
+            display: block !important;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        #socials a {
+            text-decoration: none;
+            font-size: 25px;
+            padding-left: 4px;
+            padding-top: 10px;
+        }
+    </style>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -30,60 +50,45 @@
     </script>
 </head>
 
-<body style="overflow-x: hidden;">
-<div class="container-fluid" style="padding: 0 !important;">
-
-    <div id="header"
-         style="background-color: var(--blue); position: fixed !important; top: 0; width: 100%;">
-        <div class="topnav">
-            <a href="./index.html" style="padding: 0; margin: 0"><img alt="" id="brandlogo" src="./img/GSL%20Logo.png"
-                                                                      style="width: 50px; margin: auto;"></a>
-            <div id="myLinks">
-                <li><a href="./index.html">Αρχική</a></li>
-            </div>
-            <a class="icon" href="javascript:void(0);" id="burger" onclick="myFunction()">
-                <i class="fa fa-bars" style="color: white"></i>
-            </a>
+<div id="headerasda"
+     style="background-color: var(--blue); position: relative !important; top: 0; width: 100%; height: 60px">
+    <div id="headerulcontainer"
+         style="justify-content: center; display: inline-block; align-items: center; position: absolute;top: 0; width: 100%; ">
+        <div style="width: auto; float: left; ">
+            <ul id="headerul"
+            >
+                <li><a href="./stories.html">Ιστορίες</a></li>
+            </ul>
         </div>
-        <div id="headerulcontainer"
-             style="justify-content: center; display: flex; align-items: center; position: absolute; top: 0; width: 100%; ">
-            <div style="width: auto; height: 100%;  float: right">
-                <ul id="headerul"
-                    style="list-style-type: none; justify-content: center; display: flex; align-items: center;">
-                    <li><a href="./stories.html">Ιστορίες</a></li>
-                </ul>
+        <div id="joinus" style="width: auto; float: right; ">
+            <div id="socials">
+                <a class="fa fa-facebook" href="https://www.facebook.com/GSLStories/" target="_blank"></a>
+                <a class="fa fa-twitter" href="https://twitter.com/GslStories" target="_blank"></a>
+                <a class="fa fa-instagram" href="https://www.instagram.com/gslstories/" target="_blank"></a>
+                <a class="fa fa-youtube" href="https://www.youtube.com/channel/UC8gobh_lKDrry6Ai2yn5Gzg"
+                   target="_blank"></a>
             </div>
         </div>
     </div>
-
-    <main>
-        <article class="blog-post">
-            <div>
-                <div id="videohere" style="width: 100vw; height: 650px;">
-                </div>
-                <div class="container" style="width: 800px; margin: auto">
-                    <h2 id="titlehere"
-                        style="color: rgba(41, 41, 41, 1); font-weight: bold"></h2>
-
-                    <div id="contenthere">
-                    </div>
-                </div>
-            </div>
-        </article>
-    </main>
-    <br>
 </div>
-<footer style="background: var(--blue); padding: 1rem">
-    <p style="color: white; text-align: center">Διεύθυνση: Δούριδος 2, Τηλέφωνο: <a href="tel:+306985633486"
-                                                                                    style="color: white;">+30 698
-        563
-        3486</a>, Email:
-        <a href="mailto:gslstories@outlook.com" style="color: white;">gslstories@outlook.com</a></p>
-</footer>
 
-</body>
+<body>
+<main>
+    <div style="width: 100vw; height: 100vh; display: block;">
+        <div id="videohere" style="width: 71vw;
+height: 100vh; display: block; float: left">
 
-</html>
+        </div>
+        <div id="transcript" style="width: 29vw;
+        padding: 10px;
+height: 100vh; overflow-y: scroll; display: block; float: right">
+            <h2 id="titlehere" style="word-break: break-word;"></h2>
+            <p id="content" style="word-break: break-word;"></p>
+        </div>
+    </div>
+</main>
+
+
 <script crossorigin="anonymous"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         referrerpolicy="no-referrer"
@@ -97,8 +102,8 @@
 <script>
     async function getarticle() {
         const urlParams = new URLSearchParams(window.location.search);
-        const titleslug = urlParams.get('titleslug');
-        let params = "video/" + titleslug;
+        const slug = urlParams.get('slug');
+        let params = "video/slug/" + slug;
         await getRequest(params);
     }
 
@@ -113,13 +118,9 @@
             const data = await response.json();
 
             document.title = data.title;
-
-            document.getElementById("contenthere").innerHTML += data.transcript;
-            document.getElementById("videohere").innerHTML = "     " +
-                "<iframe frameborder='0'  allow=\"fullscreen;\" allowfullscreen   allowfullscreen style='width: 100vw; height: 100%' src=" + data.url + ">" +
-                "</iframe>\n" + "</iframe>";
-            document.getElementById("titlehere").innerHTML += data.title;
-            document.getElementById("title").innerHTML += data.title;
+            document.getElementById("videohere").innerHTML = "<iframe frameborder='0'  allow=\"fullscreen;\" allowfullscreen allowfullscreen style='width: 100% !important; height: 100% !important;' src=" + data.url + "></iframe>";
+            document.getElementById("titlehere").innerText = data.title;
+            document.getElementById("content").innerText = data.transcript;
         } catch (error) {
             console.log(error);
         }
@@ -129,14 +130,8 @@
         await getarticle();
     }
 
-    function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-    }
-
     init();
 </script>
+</body>
+
+</html>

@@ -50,10 +50,6 @@ ul {
     list-style: none
 }
 
-* {
-    font-family: "Trebuchet MS", Helvetica, serif;
-}
-
 .imgcontainer img {
     border-radius: 5px;
 }
@@ -91,8 +87,24 @@ ul {
 
 @media only screen and (max-width: 750px) {
 
+    .card {
+        width: 300px !important;
+    }
+
     #footer {
         height: 850px !important;
+    }
+
+    #videohere {
+        width: 100vw !important;;
+        margin: auto !important;
+        display: block !important;;
+    }
+
+    #transcript {
+        width: 100vw !important;;
+        margin: auto !important;;
+        display: block !important;
     }
 }
 
@@ -365,4 +377,138 @@ html, body {
 
 #title {
     color: white;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 400px;
+    margin: auto !important;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+
+#writevideosHere {
+    display: flex !important;;
+    justify-content: start !important;
+    align-items: start !important;
+    float: left;
+}
+
+.card {
+    margin: auto;
+    display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, li a {
+    font-family: "Trebuchet MS", Helvetica, serif !important;
+}
+
+/* Design */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.btn {
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    margin: 1rem;
+}
+
+.card {
+    background-color: white;
+    margin: 10px;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.card_content {
+    padding: 1rem;
+}
+
+.card_title {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+.card_text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+    font-weight: 400;
+}
+
+.made_by {
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+}
+
+.cards {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.card {
+    cursor: pointer !important;
+    justify-content: space-between;
 }
