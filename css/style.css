@@ -505,7 +505,7 @@ img {
     flex-wrap: wrap;
     display: flex;
     align-items: start;
-    justify-content: start !important;
+    justify-content: center !important;
     margin: auto !important;
 }
 
