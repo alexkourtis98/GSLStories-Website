@@ -79,6 +79,11 @@ ul {
         padding: 1rem !important;
     }
 
+    .cards a {
+        margin: auto !important;
+    }
+
+
     #footer {
         height: 750px !important;
     }
@@ -315,6 +320,10 @@ html, body {
     #infodesc {
         font-size: var(--toosmall) !important;
     }
+
+    .cards_item {
+        margin: auto !important;
+    }
 }
 
 .imagediv a img {
@@ -447,13 +456,6 @@ img {
     background-color: rgba(255, 255, 255, 0.12);
 }
 
-.cards {
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 .cards_item {
     margin-right: 1rem;
     margin-bottom: 1rem;
@@ -500,9 +502,11 @@ img {
 }
 
 .cards {
-    margin: 10px;
+    flex-wrap: wrap;
     display: flex;
     align-items: start;
+    justify-content: start !important;
+    margin: auto !important;
 }
 
 html {

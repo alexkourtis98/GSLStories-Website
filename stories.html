@@ -101,7 +101,8 @@
 </div>
 
 <main style="position: relative;">
-    <div id="stories" style="min-height: 100vh; width: 100vw; z-index: -1; padding: 0;">
+    <div id="stories"
+         style="min-height: 100vh; width: 100vw; z-index: -1; padding: 0; text-align: center; margin: auto">
         <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="spinner-border" id="myspinner" role="status" style="margin: 20px auto">
                 <span class="visually-hidden">Loading...</span>
@@ -176,7 +177,7 @@
     async function addtothml(payload) {
         await payload.forEach(video => {
             document.getElementsByClassName("cards")[0].innerHTML += "<a href='video.html?slug=" + video.slug + "'" +
-                " <li class=\"cards_item\" >\n" +
+                " <li class=\"cards_item\"  >\n" +
                 "                            <div class=\"card\" style='height: 450px !important;'>\n" +
                 "                                <div >" +
                 "<img style='width: 100%; object-fit: cover; min-height: 300px;' src=" + video.imageuri + " alt=''></div>\n" +
@@ -188,6 +189,21 @@
                 "                            </div>\n" +
                 "                        </li></a>";
         })
+        await payload.forEach(video => {
+            document.getElementsByClassName("cards")[0].innerHTML += "<a href='video.html?slug=" + video.slug + "'" +
+                " <li class=\"cards_item\"  >\n" +
+                "                            <div class=\"card\" style='height: 450px !important;'>\n" +
+                "                                <div >" +
+                "<img style='width: 100%; object-fit: cover; min-height: 300px;' src=" + video.imageuri + " alt=''></div>\n" +
+                "                                <div style='width: auto; height: 100%; text-align: left !important; display: grid; justify-content: stretch'>\n" +
+                "                                    <h3 style='text-decoration: none !important; margin: 5px; word-break: break-word; text-align: left !important;'>" + video.title + "</h3>" +
+                "                                    <p style='text-decoration: none !important; margin: 5px; word-break: break-word; text-align: left !important;'>" + video.desc + "</p>" +
+                "                                    <button class=\"btn card_btn\">Δείτε το</button>\n" +
+                "                                </div>\n" +
+                "                            </div>\n" +
+                "                        </li></a>";
+        })
+
     }
 
     async function init() {
