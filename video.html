@@ -36,6 +36,18 @@
             padding-left: 4px;
             padding-top: 10px;
         }
+
+        @media only screen and (max-width: 600px) {
+            #joinus {
+                display: none !important;
+            }
+
+            #headerul {
+                text-align: center !important;
+                width: 100vw;
+                padding: 0;
+            }
+        }
     </style>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -118,7 +130,7 @@ height: 100vh; overflow-y: scroll; display: block; float: right">
             const data = await response.json();
 
             document.title = data.title;
-            document.getElementById("videohere").innerHTML = "<iframe frameborder='0'  allow=\"fullscreen;\" allowfullscreen allowfullscreen style='width: 100% !important; height: 100% !important;' src=" + data.url + "></iframe>";
+            document.getElementById("videohere").innerHTML = "<iframe frameborder='0'  allow=\"fullscreen;\" allowfullscreen allowfullscreen style='width: 100% !important; height: 100% !important;' src='https://s3.console.aws.amazon.com/s3/object/mybucketkourtis?region=eu-west-3&prefix=gslstories/file_example_MOV_480_700kB.mov'></iframe>";
             document.getElementById("titlehere").innerText = data.title;
             document.getElementById("content").innerText = data.transcript;
         } catch (error) {
