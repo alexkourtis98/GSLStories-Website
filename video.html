@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="" name="description">
     <meta content="Alexandros Kourtis" name="author">
-    <link href="./img/gslstories.png" rel="icon" type="image/x-icon">
+    <link href="./img/GSL%20Logo.png" rel="icon" type="image/x-icon">
 
     <title>GSL Stories Video</title>
     <meta content="#0275d8" name="theme-color">
@@ -129,7 +129,7 @@ height: 100vh; overflow-y: scroll; display: block; float: right">
             const data = await response.json();
 
             document.title = data.title;
-            document.getElementById("videohere").innerHTML = "<video onload='this.play()' muted  style='object-fit: cover; width: 100%; height: 100%' controls Autoplay=autoplay>\n" +
+            document.getElementById("videohere").innerHTML = "<video controlsList=\"nodownload nofullscreen noremoteplayback\" onload='this.play()' muted  style='object-fit: cover; width: 100%; height: 100%' controls Autoplay=autoplay>\n" +
                 "  <source src=" + data.url + " type='video/mp4'>\n" +
                 "</video>";
             document.getElementById("titlehere").innerText = data.title;
