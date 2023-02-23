@@ -1,4 +1,4 @@
-![Screenshot](./img/GSL%20Logo.png)
+<img src='img/GSL%20Logo.png' width='300px' />
 
 ### Τι είναι το GSL Stories?
 
