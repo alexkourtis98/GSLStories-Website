@@ -12,7 +12,7 @@ async function getRequest(params) {
                 'xapikey': localStorage.getItem('secret')
             }
         }
-        const response = await fetch('https://gslapifastapi.herokuapp.com/' + params, options);
+        const response = await fetch('https://gslstoriesbackendpython.onrender.com/' + params, options);
         const data = await response.json();
 
         document.title = data.title;
